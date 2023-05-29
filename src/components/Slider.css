@@ -1,0 +1,61 @@
+:root {
+  --main-color: rgb(255, 255, 255);
+  --main-color-hover: rgb(104, 117, 217, 0.2);
+  --track-color: #000000;
+  --mark-color: #882424;
+  
+}
+.customSlider {
+  /* max width of your slider */
+  max-width: 1000px;
+  /* Optional: Only If you want to center your slider in the page */
+  margin: auto;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+}
+
+.customSlider-track {
+  /* Top value to align your track to the center of your thumb */
+  top: 800px;
+  /* thickness of the track */
+  height: 40px;
+  /* default color of your track */
+  background: var(--track-color);
+}
+
+.customSlider-track.customSlider-track-0 {
+  /* color of the track before the thumb */
+  background: var(--main-color);
+}
+.customSlider-thumb {
+  cursor: pointer;
+  /*color for the thumb */
+  background: var(--main-color);
+  /* shape of the thumb: circle */
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  /* remove default outline when selected */
+  outline: none;
+}
+
+.customSlider-thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+
+.customSlider-mark {
+  cursor: pointer;
+  top: 6px;
+  width: 1.5px;
+  height: 8px;
+  background-color: var(--mark-color);
+}
+.customSlider-mark.customSlider-mark-before {
+  background-color: var(--main-color);
+}
+
+.customSlider-mark.customSlider-mark-active {
+  display: contents;
+}
